@@ -129,12 +129,17 @@
 
     <section>
       <h2>Hangi Verileri Topluyoruz</h2>
-      <p>Başlangıç anketinde verdiğin cevaplar (hedef, yaş, boy/kilo, antrenman sıklığı gibi), karın taraması için yüklediğin fotoğraf ve bu fotoğraftan çıkan analiz sonucu, öğün kayıtların (kalori/protein/karbonhidrat/yağ), Profil sekmesine girdiğin kilo kayıtların ve hedef kilon, ve eğer bir hesap oluşturduysan e-posta adresin. Sıralamada görünmeyi kapatırsan bu tercihin de saklanır.</p>
+      <p>Başlangıç anketinde verdiğin cevaplar (hedef, yaş, boy/kilo, antrenman sıklığı gibi), karın taraması için yüklediğin fotoğraf ve bu fotoğraftan çıkan analiz sonucu, öğün kayıtların (kalori/protein/karbonhidrat/yağ), Profil sekmesine girdiğin kilo kayıtların ve hedef kilon, ve eğer bir hesap oluşturduysan e-posta adresin. Karın Skorun ve isimsiz kullanıcı adın, varsayılan olarak liderlik tablosunda diğer kullanıcılara açık şekilde gösterilir; bunu Profil sekmesinden istediğin zaman kapatabilirsin, tercihin de saklanır.</p>
     </section>
 
     <section>
       <h2>Fotoğraf Analizi ve Üçüncü Taraflar</h2>
-      <p>Karın taraması için yüklediğin fotoğraf, analiz edilmesi için OpenAI'ın yapay zeka servisine gönderilir. Antrenmanı sana göre ayarlayabilmesi için fotoğrafla birlikte yalnızca hedefin ve haftalık antrenman sıklığın (adın veya kimliğin olmadan) gönderilir. Fotoğraf ve analiz sonucu, öncesi/sonrası karşılaştırması yapabilmen için Supabase altyapısında (veritabanı ve dosya depolama) güvenli şekilde saklanır. Fotoğrafın başka hiçbir üçüncü tarafla, reklam amacıyla veya pazarlama için paylaşılmaz.</p>
+      <p>Karın taraması için yüklediğin fotoğraf, analiz edilmesi için OpenAI'ın yapay zeka servisine gönderilir. Antrenmanı sana göre ayarlayabilmesi için fotoğrafla birlikte yalnızca hedefin ve haftalık antrenman sıklığın (adın veya kimliğin olmadan) gönderilir. Fotoğraf ve analiz sonucu, öncesi/sonrası karşılaştırması yapabilmen için Supabase altyapısında (veritabanı ve dosya depolama) güvenli şekilde saklanır. Fotoğrafın başka hiçbir üçüncü tarafla, reklam amacıyla veya pazarlama için paylaşılmaz. OpenAI, kötüye kullanımı izlemek amacıyla kendisine gönderilen verileri en fazla 30 gün süreyle tutabilir; bu veriyi kendi yapay zeka modellerini eğitmek için kullanmaz.</p>
+    </section>
+
+    <section>
+      <h2>Yapay Zeka Koçu (Zinde)</h2>
+      <p>Zinde ile sohbet ettiğinde, yazdığın mesajlar; en güncel Karın Skorun, zayıf bölge etiketlerin ve seviye ünvanın (adın veya kimliğin olmadan) sana kişiselleştirilmiş cevaplar verebilmesi için OpenAI'ın yapay zeka servisine gönderilir. Sohbet geçmişin sunucularımızda saklanmaz; yalnızca o oturum boyunca cihazında tutulur.</p>
     </section>
 
     <section>
@@ -180,12 +185,17 @@
 
     <section>
       <h2>What Data We Collect</h2>
-      <p>Your answers from the onboarding quiz (goal, age, height/weight, training frequency, and similar), the photo you upload for an ab scan and the analysis result it produces, your logged meals (calories/protein/carbs/fat), the weight check-ins and goal weight you enter on the Profile tab, and your email address if you create an account. If you turn off appearing on the leaderboard, that choice is stored too.</p>
+      <p>Your answers from the onboarding quiz (goal, age, height/weight, training frequency, and similar), the photo you upload for an ab scan and the analysis result it produces, your logged meals (calories/protein/carbs/fat), the weight check-ins and goal weight you enter on the Profile tab, and your email address if you create an account. Your Abs Score and anonymous username are shown to other users on the leaderboard by default; you can turn this off at any time on the Profile tab, and that choice is stored too.</p>
     </section>
 
     <section>
       <h2>Photo Analysis &amp; Third Parties</h2>
-      <p>The photo you upload for an ab scan is sent to OpenAI's AI service to be analyzed. So it can tailor your training, only your goal and weekly training frequency (without your name or any identity) are sent along with the photo. The photo and its analysis are stored securely on Supabase's infrastructure (database and file storage) so you can compare before/after progress. Your photo is never shared with any other third party, for advertising, or for marketing.</p>
+      <p>The photo you upload for an ab scan is sent to OpenAI's AI service to be analyzed. So it can tailor your training, only your goal and weekly training frequency (without your name or any identity) are sent along with the photo. The photo and its analysis are stored securely on Supabase's infrastructure (database and file storage) so you can compare before/after progress. Your photo is never shared with any other third party, for advertising, or for marketing. OpenAI may retain data sent to it for up to 30 days for abuse-monitoring purposes; it does not use this data to train its own AI models.</p>
+    </section>
+
+    <section>
+      <h2>AI Coach (Zinde)</h2>
+      <p>When you chat with Zinde, the messages you type — along with your latest Abs Score, weak-area labels, and level title (without your name or any identity) — are sent to OpenAI's AI service so it can give you personalized replies. Your chat history isn't stored on our servers; it only lives on your device for that session.</p>
     </section>
 
     <section>
