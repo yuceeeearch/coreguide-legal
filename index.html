@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoreCoach — Gizlilik Politikası / Privacy Policy</title>
+<style>
+  :root {
+    --bg: #0B0B0D;
+    --card: #16161A;
+    --accent: #39FF6A;
+    --text: #F5F5F7;
+    --text-secondary: #A0A3AC;
+    --border: #232329;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+  .brand span { color: var(--accent); }
+  .lang-toggle {
+    display: flex;
+    gap: 6px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px;
+  }
+  .lang-toggle button {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .lang-toggle button.active {
+    background: var(--accent);
+    color: #05130A;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .updated {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+  section {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type {
+    border-bottom: none;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 15px;
+  }
+  a { color: var(--accent); }
+  .lang-block[hidden] { display: none; }
+  footer {
+    color: var(--text-secondary);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Core<span>Coach</span></div>
+    <div class="lang-toggle">
+      <button id="btn-tr" class="active" onclick="setLang('tr')">TR</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- ===== Türkçe ===== -->
+  <div id="lang-tr" class="lang-block">
+    <h1>Gizlilik Politikası</h1>
+    <div class="updated">Son güncelleme: 25 Eylül 2026</div>
+
+    <section>
+      <h2>CoreCoach Nedir</h2>
+      <p>CoreCoach, karın/core bölgeni analiz eden ve sana özel bir antrenman programı sunan bir fitness uygulamasıdır. Bu politika, uygulamayı kullanırken hangi verilerin toplandığını, nasıl kullanıldığını ve nasıl saklandığını açıklar. CoreCoach bir tıbbi cihaz değildir; sunduğu bilgiler yalnızca genel fitness rehberliği amaçlıdır.</p>
+    </section>
+
+    <section>
+      <h2>Veri Sorumlusu</h2>
+      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında bu uygulamaya ait verilerin veri sorumlusu <strong>Jülide Çokşen</strong>'dir (İzmir, Buca). Sorularınız veya taleplerinizi aşağıdaki İletişim bölümündeki e-posta adresinden iletebilirsiniz.</p>
+    </section>
+
+    <section>
+      <h2>Hangi Verileri Topluyoruz</h2>
+      <p>Başlangıç anketinde verdiğin cevaplar (hedef, yaş, boy/kilo, antrenman sıklığı gibi), karın taraması için yüklediğin fotoğraf ve bu fotoğraftan çıkan analiz sonucu, öğün kayıtların (kalori/protein/karbonhidrat/yağ), Profil sekmesine girdiğin kilo kayıtların ve hedef kilon, ve eğer bir hesap oluşturduysan e-posta adresin. Sıralamada görünmeyi kapatırsan bu tercihin de saklanır.</p>
+    </section>
+
+    <section>
+      <h2>Fotoğraf Analizi ve Üçüncü Taraflar</h2>
+      <p>Karın taraması için yüklediğin fotoğraf, analiz edilmesi için OpenAI'ın yapay zeka servisine gönderilir. Antrenmanı sana göre ayarlayabilmesi için fotoğrafla birlikte yalnızca hedefin ve haftalık antrenman sıklığın (adın veya kimliğin olmadan) gönderilir. Fotoğraf ve analiz sonucu, öncesi/sonrası karşılaştırması yapabilmen için Supabase altyapısında (veritabanı ve dosya depolama) güvenli şekilde saklanır. Fotoğrafın başka hiçbir üçüncü tarafla, reklam amacıyla veya pazarlama için paylaşılmaz.</p>
+    </section>
+
+    <section>
+      <h2>Hesap ve Kimlik</h2>
+      <p>Uygulamayı ilk açtığında sana isimsiz (anonim) bir kimlik atanır; bu, verilerinin cihazına özel olarak saklanmasını sağlar. İstersen bu kimliği e-posta/şifre ile gerçek bir hesaba bağlayabilirsin — bu, mevcut verilerini kaybetmeden başka bir cihazdan giriş yapmanı sağlar.</p>
+    </section>
+
+    <section>
+      <h2>Adım Sayısı ve Sağlık Verileri</h2>
+      <p>Adım sayısı, cihazının kendi sensöründen okunur ve yalnızca uygulama içinde sana gösterilir — sunucularımıza gönderilmez. Apple Health / Health Connect entegrasyonu şu an geliştirme aşamasındadır ve henüz gerçek veri okumamaktadır.</p>
+    </section>
+
+    <section>
+      <h2>Veri Saklama ve Silme</h2>
+      <p>Verilerin, sen silene kadar saklanır; yalnızca şu sınırlar vardır: taramalarının fotoğraflarından yalnızca son 12'si tutulur (eskileri silinir, analiz sonuçların ve skorların kalır) ve öğün ile antrenman kayıtların 12 ay sonra silinir. Profil sekmesindeki "Verilerimi Sil" seçeneğiyle taramalarını (fotoğraflar dahil), öğün kayıtlarını, antrenman geçmişini, kilo kayıtlarını, sıralama kaydını ve onboarding cevaplarını anında ve kalıcı olarak silebilirsin — bu işlem geri alınamaz. Hesabının kendisini de yine Profil sekmesindeki "Hesabımı Sil" ile uygulama içinden silebilirsin; bu, hesabını ve tüm verilerini kalıcı olarak kaldırır (abonelik ise App Store veya Google Play üzerinden ayrıca iptal edilir).</p>
+    </section>
+
+    <section>
+      <h2>İletişim</h2>
+      <p>Sorularınız veya veri silme talepleri için: <a href="mailto:yucesscagan@gmail.com">yucesscagan@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>Değişiklikler</h2>
+      <p>Bu politika zaman zaman güncellenebilir. Önemli değişikliklerde uygulama içinden bilgilendirileceksin.</p>
+    </section>
+  </div>
+
+  <!-- ===== English ===== -->
+  <div id="lang-en" class="lang-block" hidden>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: September 25, 2026</div>
+
+    <section>
+      <h2>What CoreCoach Is</h2>
+      <p>CoreCoach is a fitness app that analyzes your abs/core and builds you a personalized training program. This policy explains what data we collect while you use the app, how it's used, and how it's stored. CoreCoach is not a medical device; anything it tells you is general fitness guidance only.</p>
+    </section>
+
+    <section>
+      <h2>Data Controller</h2>
+      <p>Under Turkey's Law No. 6698 on the Protection of Personal Data ("KVKK"), the data controller for this app's data is <strong>Jülide Çokşen</strong> (İzmir, Türkiye). You can reach out with questions or requests at the email address under Contact below.</p>
+    </section>
+
+    <section>
+      <h2>What Data We Collect</h2>
+      <p>Your answers from the onboarding quiz (goal, age, height/weight, training frequency, and similar), the photo you upload for an ab scan and the analysis result it produces, your logged meals (calories/protein/carbs/fat), the weight check-ins and goal weight you enter on the Profile tab, and your email address if you create an account. If you turn off appearing on the leaderboard, that choice is stored too.</p>
+    </section>
+
+    <section>
+      <h2>Photo Analysis &amp; Third Parties</h2>
+      <p>The photo you upload for an ab scan is sent to OpenAI's AI service to be analyzed. So it can tailor your training, only your goal and weekly training frequency (without your name or any identity) are sent along with the photo. The photo and its analysis are stored securely on Supabase's infrastructure (database and file storage) so you can compare before/after progress. Your photo is never shared with any other third party, for advertising, or for marketing.</p>
+    </section>
+
+    <section>
+      <h2>Account &amp; Identity</h2>
+      <p>The first time you open the app, you're given an anonymous identity, so your data is tied to your device by default. You can optionally link that identity to a real email/password account — this lets you sign in from another device without losing your existing data.</p>
+    </section>
+
+    <section>
+      <h2>Step Count &amp; Health Data</h2>
+      <p>Your step count is read from your device's own sensor and shown only within the app — it is never sent to our servers. Apple Health / Health Connect integration is still under development and does not read any real data yet.</p>
+    </section>
+
+    <section>
+      <h2>Data Retention &amp; Deletion</h2>
+      <p>Your data is kept until you delete it, with these limits only: just your last 12 scan photos are kept (older photos are deleted, your analysis results and scores stay), and meal and workout records are deleted after 12 months. The "Delete My Data" option on the Profile tab instantly and permanently deletes your scans (including photos), meal log, workout history, weight check-ins, leaderboard entry, and onboarding answers — this cannot be undone. You can also delete the account itself from the Profile tab with "Delete My Account" — it permanently removes your account and all your data (a subscription is cancelled separately in the App Store or Google Play).</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>For questions or data-deletion requests: <a href="mailto:yucesscagan@gmail.com">yucesscagan@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>This policy may be updated from time to time. We'll notify you in-app of any significant changes.</p>
+    </section>
+  </div>
+
+  <footer>CoreCoach</footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('lang-tr').hidden = lang !== 'tr';
+    document.getElementById('lang-en').hidden = lang !== 'en';
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('corecoach_privacy_lang', lang); } catch (e) {}
+  }
+  (function () {
+    try {
+      var saved = localStorage.getItem('corecoach_privacy_lang');
+      if (saved === 'en') setLang('en');
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
