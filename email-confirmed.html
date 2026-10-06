@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>CoreGuide — E-posta Onayı / Email Confirmation</title>
+<style>
+  :root {
+    --bg: #0B0B0D;
+    --card: #16161A;
+    --accent: #39FF6A;
+    --weak: #FF5A5A;
+    --text: #F5F5F7;
+    --text-secondary: #A0A3AC;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px;
+  }
+  .card {
+    width: 100%;
+    max-width: 440px;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+  .mark {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(57, 255, 106, 0.12);
+    color: var(--accent);
+  }
+  .error .mark { background: rgba(255, 90, 90, 0.12); color: var(--weak); }
+  h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 8px; }
+  p { margin: 0 0 12px; color: var(--text-secondary); }
+  .en { margin-top: 24px; padding-top: 20px; border-top: 1px solid #232329; }
+  .en h2 { font-size: 16px; font-weight: 700; color: var(--text); margin: 0 0 6px; }
+  .en p { font-size: 14px; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+  <!-- Supabase redirects here (Auth → URL Configuration → Site URL) after the user clicks
+       the confirmation link. On success the URL hash carries session tokens, on failure
+       `error`/`error_code`/`error_description`. Nothing is stored or sent anywhere; the
+       hash is wiped from the address bar right away. -->
+  <main class="card" id="card">
+    <div class="brand">CoreGuide</div>
+
+    <div id="ok">
+      <div class="mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </div>
+      <h1>E-postan onaylandı</h1>
+      <p>Bu sayfayı kapatıp CoreGuide uygulamasına dönebilirsin. Hesabın Profil ekranında görünecek; görünmezse uygulamayı kapatıp yeniden aç.</p>
+      <div class="en">
+        <h2>Your email is confirmed</h2>
+        <p>You can close this page and go back to the CoreGuide app. Your account will show on the Profile screen; if it doesn't, close and reopen the app.</p>
+      </div>
+    </div>
+
+    <div id="fail" class="hidden">
+      <div class="mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 7v6"/><path d="M12 17h.01"/></svg>
+      </div>
+      <h1>Bağlantı geçersiz</h1>
+      <p>Bu onay bağlantısının süresi dolmuş ya da daha önce kullanılmış. Uygulamada Profil ekranından e-posta adresini yeniden girerek yeni bir onay maili isteyebilirsin.</p>
+      <div class="en">
+        <h2>This link is no longer valid</h2>
+        <p>This confirmation link has expired or was already used. In the app, enter your email again on the Profile screen to get a new confirmation email.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.hash.slice(1) || window.location.search.slice(1));
+      if (params.get('error') || params.get('error_code')) {
+        document.getElementById('ok').classList.add('hidden');
+        document.getElementById('fail').classList.remove('hidden');
+        document.getElementById('card').classList.add('error');
+      }
+      if (window.location.hash || window.location.search) {
+        history.replaceState(null, '', window.location.pathname);
+      }
+    })();
+  </script>
+</body>
+</html>
